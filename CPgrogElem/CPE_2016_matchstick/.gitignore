@@ -1,0 +1,10 @@
+crashtest/
+test
+script.sh
+m_stats
+output.log
+*.log
+matchstick
+srcs/*.o
+srcs/core/*.o
+
