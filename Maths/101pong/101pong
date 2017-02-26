@@ -1,0 +1,72 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*
+
+##########################################################
+# 101pong.py for 101Pong in /home/bender/repo/101pong/   #
+#                  ###############                       #
+# Proudly made by : John Doe                             #
+# Login :   <john_Doe@epitech.eu>                        #
+#                                                        #
+#                  ##############                        #
+#                                                        #
+# Started on  Tue Nov  8 13:59:39 2016 John Doe          #
+# Last update Wed Nov  9 12:58:05 2016 John Doe          #
+#                  ##############                        #
+#Copyright (c) 2016 Copyright Holder All Rights Reserved.#
+##########################################################
+
+import sys
+import math
+
+# ||Error Handling|| #
+if len(sys.argv) != 8:
+    sys.stderr.write('***Bad number of arguments***\n\n\tUsage :\n./101pong arg1-> arg6')
+    sys.exit(84)
+
+#Mt-1 =
+x0 = float(sys.argv[1])
+y0 = float(sys.argv[2])
+z0 = float(sys.argv[3])
+#Mt =
+Xt = float(sys.argv[4])
+Yt = float(sys.argv[5])
+Zt = float(sys.argv[6])
+
+#n
+n = int(sys.argv[7])
+
+##########VECTEURS##############################
+# calcul des coordonnees du vecteur vitesse    #
+Xv = Xt - x0
+Yv = Yt - y0
+Zv = Zt - z0
+############affichage############
+print "The speed vector coordinates are :"
+print "(%.2f;%.2f;%.2f)" % (Xv, Yv, Zv)
+#################################
+########coordonees de Pn ########
+Xn = Xt + n * Xv
+Yn = Yt + n * Yv
+Zn = Zt + n * Yt
+############affichage############
+print "At time t+%i, ball coordinates will be :" % (n)
+print "(%.2f;%.2f;%.2f)" % (Xn, Yn, Zn)
+#################################
+if Zv == 0:
+    if Zt == 0:
+        print "The incidence angle is :"
+        print "0 degrees"
+    else:
+         print "The ball won’t reach the bat."
+#verifier que la balle n as pas deja franchi le rubicon
+elif -Zt/Zv < 0:
+    print "The ball won’t reach the bat."
+else:
+    normeV = math.sqrt(Xv **2 + Yv **2 + Zv **2)
+    iAngle = 90 - 180 / math.pi * math.acos(math.fabs(Zv)/normeV)
+    print "The incidence angle is :"
+    print "%.2f degrees" % iAngle
+
+sys.exit(0)
+############################
+#########################
