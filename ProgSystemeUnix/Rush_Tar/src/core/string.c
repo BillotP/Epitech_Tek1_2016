@@ -5,15 +5,15 @@
 ** Login   <paul1.billot@epitech.eu>
 **
 ** Started on  Sun Mar  5 05:56:38 2017 Bender_Rodriguez
-** Last update Sun Mar  5 05:56:41 2017 Bender_Rodriguez
+** Last update Tue Mar  7 13:10:25 2017 bender
 */
 
 #include "base.h"
 #include <stdlib.h>
 
-char				*my_strcpy(const char *src, char *dest)
+char		*my_strcpy(const char *src, char *dest)
 {
-  int				i;
+  int		i;
 
   i = 0;
   while (src[i])
@@ -24,11 +24,11 @@ char				*my_strcpy(const char *src, char *dest)
   dest[i] = '\0';
   return (dest);
 }
-char				*my_strdup(const char *src)
+char		*my_strdup(const char *src)
 {
-  char			*buffer;
-  ssize_t		size;
-  ssize_t		i;
+  char		*buffer;
+  ssize_t	size;
+  ssize_t	i;
 
   i = 0;
   size = len(src);
@@ -42,11 +42,11 @@ char				*my_strdup(const char *src)
   buffer[i] = '\0';
   return (buffer);
 }
-char				*my_strcat(char *dest, const char *src)
+char		*my_strcat(char *dest, const char *src)
 {
-  int				i;
-  ssize_t		j;
-  char			*buffer;
+  int		i;
+  ssize_t	j;
+  char		*buffer;
 
   i = 0;
   if ((!(src)) || (!(dest)))
@@ -65,7 +65,7 @@ char				*my_strcat(char *dest, const char *src)
   return (buffer);
 }
 
-int				strn_cmp(const char *s1, const char *s2, size_t n)
+int		strn_cmp(const char *s1, const char *s2, size_t n)
 {
   size_t	i;
 
@@ -77,9 +77,9 @@ int				strn_cmp(const char *s1, const char *s2, size_t n)
   return (0);
 }
 
-ssize_t			len(const char *str)
+ssize_t		len(const char *str)
 {
-  ssize_t		i;
+  ssize_t	i;
 
   i = 0;
   if ((str))

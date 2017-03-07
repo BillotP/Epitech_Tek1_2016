@@ -5,7 +5,7 @@
 ** Login   <simon_f@epitech.net>
 **
 ** Started on  Fri Mar 03 20:45:01 2017 François Simon
-** Last update Sun Mar  5 22:43:07 2017 François Simon
+** Last update Tue Mar  7 12:36:20 2017 bender
 */
 
 /*
@@ -61,7 +61,7 @@ int		init_data(t_data *ptr, const char *filename)
 ** Write down header and
 ** raw data, padding if necessary
 */
-int			write_down(t_data *data, t_tar *header, struct stat *ptr)
+int		write_down(t_data *data, t_tar *header, struct stat *ptr)
 {
   char		*datas;
 
@@ -83,11 +83,11 @@ int			write_down(t_data *data, t_tar *header, struct stat *ptr)
 ** Write header and raw file
 ** data.
 */
-int	create_file(int ac, char **av)
+int		create_file(int ac, char **av)
 {
   struct stat   buf;
   t_data	data;
-  t_tar	  hdr;
+  t_tar		hdr;
   char		footer[TBLOCK];
 
   memset(footer, '\0', sizeof(footer));

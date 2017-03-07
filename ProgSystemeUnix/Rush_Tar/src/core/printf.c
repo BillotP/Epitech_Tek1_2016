@@ -5,7 +5,7 @@
 ** Login   <paul1.billot@epitech.eu>
 **
 ** Started on  Sun Mar  5 05:56:15 2017 Bender_Rodriguez
-** Last update Sun Mar  5 05:56:18 2017 Bender_Rodriguez
+** Last update Tue Mar  7 13:06:52 2017 bender
 */
 
 #include <unistd.h>
@@ -14,12 +14,12 @@
 
 #include "printf.h"
 
-int					p_printf(int fd, const char *format, ...)
+int		p_printf(int fd, const char *format, ...)
 {
-  va_list		list;
-  int				(*ptr[4])(va_list list, int fd);
-  int				i;
-  int				run;
+  va_list	list;
+  int		(*ptr[4])(va_list list, int fd);
+  int		i;
+  int		run;
 
   i = 0;
   run = 0;

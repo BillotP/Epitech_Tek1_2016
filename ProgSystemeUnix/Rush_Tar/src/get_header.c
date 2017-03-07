@@ -5,18 +5,19 @@
 ** Login   <simon_f@epitech.net>
 **
 ** Started on  Sat Mar 04 12:40:23 2017 François Simon
-** Last update Mon Mar  6 13:43:44 2017 Bender_Rodriguez
+** Last update Tue Mar  7 13:13:57 2017 bender
 */
 
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>
+#include "base.h"
 #include "tar.h"
 
 t_tar	*get_filename(const char *filename, t_tar  *ptr)
 {
-  sprintf(ptr->name, "%s", filename);
+  my_strcpy(filename, ptr->name);
   return (ptr);
 }
 

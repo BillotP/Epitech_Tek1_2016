@@ -5,27 +5,27 @@
 ** Login   <paul1.billot@epitech.eu>
 **
 ** Started on  Sun Mar  5 05:55:42 2017 Bender_Rodriguez
-** Last update Sun Mar  5 05:55:46 2017 Bender_Rodriguez
+** Last update Tue Mar  7 12:59:05 2017 bender
 */
 
 #include "base.h"
 
-int			is_lwcse(const char c)
+int	is_lwcse(const char c)
 {
   if (c >= 'a' && c <= 'z')
     return (1);
   return (0);
 }
-int			is_num(const char c)
+int	is_num(const char c)
 {
   if (c >= '0' && c <= '9')
     return (1);
   return (0);
 }
-int			my_stringisnum(const char *str)
+int	my_stringisnum(const char *str)
 {
-  int		i;
-  int		j;
+  int	i;
+  int	j;
 
   i = 0;
   j = 0;
@@ -41,10 +41,10 @@ int			my_stringisnum(const char *str)
     return (0);
 }
 
-char			*my_strcatvs(char *dest, const char *src)
+char	*my_strcatvs(char *dest, const char *src)
 {
-  int			i;
-  int			j;
+  int	i;
+  int	j;
 
   i = 0;
   j = len(dest);

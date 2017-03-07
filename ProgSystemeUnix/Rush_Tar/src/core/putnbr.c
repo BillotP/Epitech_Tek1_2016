@@ -5,7 +5,7 @@
 ** Login   <paul1.billot@epitech.eu>
 **
 ** Started on  Sun Mar  5 05:56:25 2017 Bender_Rodriguez
-** Last update Sun Mar  5 05:56:28 2017 Bender_Rodriguez
+** Last update Tue Mar  7 13:07:40 2017 bender
 */
 
 #include <unistd.h>
@@ -13,7 +13,7 @@
 #include <limits.h>
 #include "base.h"
 
-int				p_putnbr(long nb, int fd)
+int		p_putnbr(long nb, int fd)
 {
   if (nb >= LONG_MAX || nb <= LONG_MIN)
     return (84);

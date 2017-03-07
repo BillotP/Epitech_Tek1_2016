@@ -1,11 +1,11 @@
 /*
-** base.c for CPE_2016_B2rush1 in /home/bender/Repo/rush/CPE_2016_b2rush1/src/core/
-**
-** Made by Bender_Rodriguez
-** Login   <paul1.billot@epitech.eu>
-**
-** Started on  Sun Mar  5 05:55:02 2017 Bender_Rodriguez
-** Last update Sun Mar  5 05:55:15 2017 Bender_Rodriguez
+** base.c for Project-Master in /home/bender/Repo/rush/CPE_2016_b2rush1
+** 
+** Made by bender
+** Login   <paul.billot@epitech.eu>
+** 
+** Started on  Tue Mar  7 13:00:02 2017 bender
+** Last update Tue Mar  7 13:01:16 2017 bender
 */
 
 #include <unistd.h>
@@ -13,9 +13,9 @@
 
 #include "base.h"
 
-int					pprint(const char *str, int fd)
+int		pprint(const char *str, int fd)
 {
-  ssize_t		wr;
+  ssize_t	wr;
 
   wr = 0;
   if ((wr = write(fd, str, len(str))) == -1)
@@ -23,16 +23,16 @@ int					pprint(const char *str, int fd)
   return (0);
 }
 
-char			*my_malloc(char *str, size_t len)
+char		*my_malloc(char *str, size_t len)
 {
   if ((str = malloc(sizeof(*str) * len)) == NULL)
     return (NULL);
   return (str);
 }
-char			**freetab(char **ptr)
+char		**freetab(char **ptr)
 {
-  int			i;
-  int			j;
+  int		i;
+  int		j;
 
   i = 0;
   j = 0;
@@ -47,7 +47,7 @@ char			**freetab(char **ptr)
   free(ptr);
   return (NULL);
 }
-char			*clean_free(char *ptr)
+char		*clean_free(char *ptr)
 {
   if (ptr)
     {
@@ -56,7 +56,7 @@ char			*clean_free(char *ptr)
     }
   return (NULL);
 }
-int			my_atoi(const char *str)
+int		my_atoi(const char *str)
 {
   int		nb;
 

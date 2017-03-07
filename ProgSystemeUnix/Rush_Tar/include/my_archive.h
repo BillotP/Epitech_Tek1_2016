@@ -5,7 +5,7 @@
 ** Login   <paul1.billot@epitech.eu>
 **
 ** Started on  Sun Mar  5 05:09:25 2017 Bender_Rodriguez
-** Last update Tue Mar  7 12:06:50 2017 Bender_Rodriguez
+** Last update Tue Mar  7 12:32:30 2017 bender
 */
 
 #ifndef _MY_ARCHIVE_H_
@@ -36,14 +36,14 @@ Try 'tar --help' or 'tar --usage' for more information."
 #define USAGE "Usage: ./my_archive [archive_name] [files ...]"
 #endif
 
-typedef struct s_data {
-  int			new_archv;
-  int			toarch;
-  int			i;
+typedef struct	s_data {
   ssize_t	bytes_read;
+  int		new_archv;
+  int		toarch;
+  int		i;
   char		end_footr[512 * 12];
   char		buff[512];
-}	t_data;
+}		t_data;
 
 /*
 ** utils.c

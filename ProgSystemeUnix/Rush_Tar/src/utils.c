@@ -5,7 +5,7 @@
 ** Login   <simon_f@epitech.net>
 ** 
 ** Started on  Sun Mar  5 20:49:53 2017 François Simon
-** Last update Sun Mar  5 20:49:54 2017 François Simon
+** Last update Tue Mar  7 13:14:23 2017 bender
 */
 
 #include <unistd.h>
@@ -22,7 +22,7 @@ size_t	my_len(const char *str)
   return (i);
 }
 
-int				err_handler(const char *err_str, int rt)
+int	err_handler(const char *err_str, int rt)
 {
   write(2, ERRMSG, my_len(ERRMSG));
   write(2, err_str, my_len(err_str));
@@ -30,7 +30,7 @@ int				err_handler(const char *err_str, int rt)
   return (rt);
 }
 
-void			*void_err(const char *err_str, void *rt)
+void	*void_err(const char *err_str, void *rt)
 {
   write(2, ERRMSG, my_len(ERRMSG));
   write(2, err_str, my_len(err_str));

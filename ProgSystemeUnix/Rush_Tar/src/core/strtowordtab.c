@@ -5,7 +5,7 @@
 ** Login   <paul1.billot@epitech.eu>
 **
 ** Started on  Sun Mar  5 05:56:48 2017 Bender_Rodriguez
-** Last update Sun Mar  5 05:56:51 2017 Bender_Rodriguez
+** Last update Tue Mar  7 13:13:19 2017 bender
 */
 
 #include "base.h"
@@ -13,13 +13,13 @@
 
 #include <stdlib.h>
 
-typedef struct 		t_count {
-  int		linesize;
-  int		args;
-  int		line;
-  int		i;
-  int		j;
-}								s_count;
+typedef struct	t_count {
+  int	linesize;
+  int	args;
+  int	line;
+  int	i;
+  int	j;
+}		s_count;
 
 void	initcount(s_count *list)
 {
@@ -30,9 +30,9 @@ void	initcount(s_count *list)
   list->linesize = 0;
 }
 
-int			check_words(char a, const char *delim)
+int	check_words(char a, const char *delim)
 {
-  int		i;
+  int	i;
 
   i = 0;
   while (delim[i] != 0)
@@ -44,7 +44,7 @@ int			check_words(char a, const char *delim)
   return (1);
 }
 
-int		init_buffer(char *str, const char *delim, char ***tab)
+int	init_buffer(char *str, const char *delim, char ***tab)
 {
   int	i;
   int	argss;
@@ -75,8 +75,8 @@ void	move_str(int *pos, int *linesize, char *str, const char *delim)
 
 char		**strto_wordtab(char *str, const char *delim)
 {
-  char	**wordtab;
-  s_count		count;
+  char		**wordtab;
+  s_count	count;
 
   initcount(&count);
   count.args = init_buffer(str, delim, &wordtab);
@@ -87,16 +87,16 @@ char		**strto_wordtab(char *str, const char *delim)
     {
       count.j = 0;
       move_str(&count.i, &count.linesize, str, delim);
-      if ((wordtab[count.line] = malloc(sizeof(char) \
+      if ((wordtab[count.line] = malloc(sizeof(char)			\
 					* (count.linesize + 1))) == NULL)
 	return (NULL);
       while (str[count.i] != 0 && check_words(str[count.i], delim) != 0)
 	if (str[count.i++] != '\0')
-	    wordtab[count.line][count.j++] = str[count.i - 1];
-	  wordtab[count.line++][count.j] = 0;
+	  wordtab[count.line][count.j++] = str[count.i - 1];
+      wordtab[count.line++][count.j] = 0;
 	  if (str[count.i] != 0)
 	    count.i++;
-	}
+    }
   wordtab[count.line] = NULL;
   return (wordtab);
 }
